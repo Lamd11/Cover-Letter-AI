@@ -36,7 +36,6 @@
             android:clickable="true"
             android:textColor="@color/black"
             android:focusable="true" />
-
     </LinearLayout>
 
 

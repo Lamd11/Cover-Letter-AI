@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:id="@+id/parentView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingHorizontal="16dp"
-    tools:context=".WinPage">
+    android:layout_gravity="center"
+    tools:context=".WinPage"
+    android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/usernameText"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/difficultyText"
-        app:layout_constraintEnd_toStartOf="@+id/logoutText"
-        app:layout_constraintHorizontal_bias="0.012"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17" />
+        android:paddingVertical="12dp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/logoutText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="@string/log_out"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/difficultyText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166" />
+        <TextView
+            android:id="@+id/usernameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/logoutText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/log_out"
+            android:textSize="20sp"
+            android:textAlignment="textEnd"
+            android:ellipsize="end"
+            android:clickable="true"
+            android:textColor="@color/black"
+            android:focusable="true" />
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/difficultyText"
@@ -44,12 +48,9 @@
         android:layout_marginBottom="48dp"
         android:textAlignment="center"
         android:textColor="@color/black"
+        android:layout_marginTop="36dp"
         android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/numOfGuesses"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.406"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/numOfGuesses"
@@ -58,11 +59,7 @@
         android:layout_marginBottom="84dp"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/leaderboardText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/leaderboardText"
@@ -70,11 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/leaderboardNumberOne"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.038"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/leaderboardNumberOne"
@@ -82,11 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/leaderboardNumberTwo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/leaderboardNumberTwo"
@@ -94,11 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/leaderboardNumberThree"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.002"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/leaderboardNumberThree"
@@ -106,11 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/leaderboardNumberFour"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/leaderboardNumberFour"
@@ -118,11 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/leaderboardNumberFive"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.002"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/leaderboardNumberFive"
@@ -130,11 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/playAgainButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.002"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/playAgainButton"
@@ -142,9 +115,5 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
         android:text="@string/play_again"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_gravity="center"/>
+</LinearLayout>
